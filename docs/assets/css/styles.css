@@ -393,6 +393,10 @@ a.btn-cta {
   text-align: center;
 }
 
+.implementation-section .content .arch-image .img-responsive {
+  margin: 0 auto;
+}
+
 .about-section .intro {
   color: #a2a6af;
   font-size: 16px;
