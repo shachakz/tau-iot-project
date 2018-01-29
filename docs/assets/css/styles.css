@@ -340,7 +340,7 @@ a.btn-cta {
   padding-top: 90px;
 }
 
-.implementation-section .figure-holder {
+.figure-holder {
   position: relative;
   width: 160px;
   height: 250px;
@@ -348,26 +348,26 @@ a.btn-cta {
   white-space: nowrap;
 }
 
-.implementation-section .figure-holder .helper {
+.figure-holder .helper {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
 
-.implementation-section .figure-image {
+.figure-image {
   vertical-align: middle;
   max-width: 130px;
   max-height: 230px;
 }
 
-.implementation-section .section-title {
+.section-title {
   margin: 0;
   margin-bottom: 30px;
   font-size: 36px;
   font-weight: 300;
 }
 
-.implementation-section .sub-title {
+.sub-title {
   margin: 0;
   max-width: 760px;
   text-align: left;
@@ -379,7 +379,7 @@ a.btn-cta {
 
 }
 
-.implementation-section .content {
+.content {
   color: #a2a6af;
   font-size: 16px;
 
@@ -389,11 +389,11 @@ a.btn-cta {
 }
 
 
-.implementation-section .content .arch-image {
+.content .arch-image {
   text-align: center;
 }
 
-.implementation-section .content .arch-image .img-responsive {
+.content .arch-image .img-responsive {
   margin: 0 auto;
 }
 
@@ -819,6 +819,18 @@ a.btn-cta {
 .team-section .member-desc {
   color: #616670;
 }
+
+/* ======= Demonstration Section ======= */
+.demonstration-section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background: #f5f5f5;
+}
+
+.demonstration-section .content {
+  color: #52535a;
+}
+
 /* ======= Contact Section ======= */
 .contact-section {
   padding-top: 90px;
