@@ -23,21 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="488" column="110" selection-start-line="488" selection-start-column="110" selection-end-line="488" selection-end-column="110" />
+            <state relative-caret-position="207">
+              <caret line="76" column="35" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="1048" column="0" selection-start-line="1048" selection-start-column="0" selection-end-line="1048" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="945" column="13" selection-start-line="945" selection-start-column="13" selection-end-line="945" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -61,8 +61,8 @@
         <option value="$PROJECT_DIR$/assets/images/logo-icon.svg" />
         <option value="$PROJECT_DIR$/assets/plugins/font-awesome/css/font-awesome.css" />
         <option value="$PROJECT_DIR$/index_orig.html" />
-        <option value="$PROJECT_DIR$/assets/css/styles.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/assets/css/styles.css" />
       </list>
     </option>
   </component>
@@ -239,12 +239,12 @@
       <option name="presentableId" value="Default" />
       <updated>1517076852027</updated>
       <workItem from="1517076853359" duration="20111000" />
-      <workItem from="1517171805793" duration="10754000" />
+      <workItem from="1517171805793" duration="10928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30865000" />
+    <option name="totallyTimeSpent" value="31039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -367,18 +367,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="1048" column="0" selection-start-line="1048" selection-start-column="0" selection-end-line="1048" selection-end-column="0" />
+        <state relative-caret-position="207">
+          <caret line="76" column="35" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="488" column="110" selection-start-line="488" selection-start-column="110" selection-end-line="488" selection-end-column="110" />
+        <state relative-caret-position="264">
+          <caret line="945" column="13" selection-start-line="945" selection-start-column="13" selection-end-line="945" selection-end-column="13" />
           <folding />
         </state>
       </provider>
