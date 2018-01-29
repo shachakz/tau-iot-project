@@ -180,20 +180,19 @@
                         <!-- Tab panes -->
                         <div class="feature-content tab-content col-md-6 col-sm-4 col-xs-12 col-md-pull-0 col-sm-pull-0 col-xs-pull-0">
                             <div role="tabpanel" class="tab-pane fade in active" id="tech-feature-img-1">
-                                <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/feature-1.png" alt="screenshot" ></a>
-
+                                <a target="_blank"><img class="img-responsive feature-img" src="assets/images/about-cloud.png" alt="screenshot" ></a>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="tech-feature-img-2">
-                                <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/feature-2.png" alt="screenshot" ></a>
+                                <a target="_blank"><img class="img-responsive feature-img" src="assets/images/about-shield.png" alt="screenshot" ></a>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="tech-feature-img-3">
-                                <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/feature-3.png" alt="screenshot" ></a>
+                                <a target="_blank"><img class="img-responsive feature-img" src="assets/images/about-cc.png" alt="screenshot" ></a>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="tech-feature-img-4">
-                                <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/feature-4.png" alt="screenshot" ></a>
+                                <a target="_blank"><img class="img-responsive feature-img" src="assets/images/about-google-home.png" alt="screenshot" ></a>
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="tech-feature-img-5">
-                                <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/feature-4.png" alt="screenshot" ></a>
+                                <a target="_blank"><img class="img-responsive feature-img" src="assets/images/about-github.png" alt="screenshot" ></a>
                             </div>
 
                         </div><!--//techs-content-->
@@ -447,18 +446,18 @@
                 hosted on Heroku (same as for our CloudMQTT server).
                 <br class="hidden-xs"><br class="hidden-xs">
                 <div class="sub-title">Query</div>
-                For our full demonstration we used the following setup:
+                This time we wanted to demonstrate querying feature. The setup is slightly different:
                 <div class="arch-image">
                     <img class="img-responsive" src="assets/images/demon2.gif"/>
                 </div>
-                As you can see, each time a speaker asks for a command, the google home analyzes the command's structure
-                and (using dialogflow) creates a JSON with the location (kitchen), the device (lights) and the command (on).
-                The JSON is sent to out web service running on Heroku dyno (through webhook supplied by dialogflow agent).
-                The JSON is then translated into MQTT message (containing json with the command & parameters if there are any).
-                The MQTT broker sends the message to the subscribing clients. In this case - nothing will happen to the lights
-                in the living room (of course).
-                As you can see, we easily adapted the Google Home Mini to be a "Thing" in our network, using a simple web service
-                hosted on Heroku (same as for our CloudMQTT server).
+                This time, you can see a full round trip - querying results the same flow until the device receives the MQTT message.
+                The Heroku know holds the response to dialogflow until a response is received from the endpoint. When the endpoint responds with
+                MQTT message including the sentence to read to the user with a matching correlation id of the request,
+                the web server matches the correlation to the HTTP session and responds to dialogflow,
+                supplying the reply sentence to the Home mini and then it's speakers sound the response to the user.
+                <br class="hidden-xs">
+                There is room to extend & enhance this flow - supporting multiple consumers query, crafting
+                the sentence of the response in dialogflow instead of the endpoint and more...
                 <br class="hidden-xs"><br class="hidden-xs">
             </div>
             <div id="videos" class="videos-sub-section">
@@ -466,99 +465,38 @@
                     <div class="tabbed-area row">
 
                         <!-- Nav tabs -->
-                        <ul class="feature-nav nav nav-pill nav-stacked text-left col-md-3 col-sm-4 col-xs-12 col-md-push-9 col-sm-push-8 col-xs-push-0" role="tablist">
-                            <li role="presentation" class="active"><a href="#tech-feature-img-1" data-target="#tech-feature-img-1, #tech-feature-txt-1" role="tab" data-toggle="tab"><i class="fa fa-cloud"></i>Cloud Based - Can be used from anywhere!</a></li>
-                            <li role="presentation"><a href="#tech-feature-img-2" data-target="#tech-feature-img-2, #tech-feature-txt-2"role="tab" data-toggle="tab"><i class="fa fa-shield"></i>Secure access "from the outside"</a></li>
+                        <ul class="feature-nav nav nav-pill nav-stacked text-left col-md-4 col-sm-4 col-xs-12 col-md-push-0 col-sm-push-0 col-xs-push-0" role="tablist">
+                            <li role="presentation" class="active"><a href="#video-1" data-target="#video-1" role="tab" data-toggle="tab"><i class="fa fa-cutlery"></i>Multiple clients at one location (kitchen)</a></li>
+                            <li role="presentation"><a href="#video-2" data-target="#video-2"role="tab" data-toggle="tab"><i class="fa fa-lightbulb-o"></i>Multiple clients, multiple locations</a></li>
                             <!--<li role="presentation"><a href="#feature-3" aria-controls="feature-3" role="tab" data-toggle="tab"><i class="fa fa-universal-access"></i>Access Control - decide who controls what</a></li>-->
-                            <li role="presentation"><a href="#tech-feature-img-3" data-target="#tech-feature-img-3, #tech-feature-txt-3" role="tab" data-toggle="tab"><i class="fa fa-microchip"></i>Implemented on CC1350 & CC3100</a></li>
-                            <li role="presentation"><a href="#tech-feature-img-4" data-target="#tech-feature-img-4, #tech-feature-txt-4" role="tab" data-toggle="tab"><i class="fa fa-microphone"></i>Control things using your voice</a></li>
-                            <li role="presentation"><a href="#tech-feature-img-5" data-target="#tech-feature-img-5, #tech-feature-txt-5" role="tab" data-toggle="tab"><i class="fa fa-github"></i>Open Source</a></li>
+                            <li role="presentation"><a href="#video-3" data-target="#video-3" role="tab" data-toggle="tab"><i class="fa fa-thermometer-empty"></i>Query the temperature</a></li>
                         </ul>
 
                         <!-- Tab panes -->
-                        <div class="feature-content tab-content col-md-6 col-sm-4 col-xs-12 col-md-pull-0 col-sm-pull-0 col-xs-pull-0">
-                            <div role="tabpanel" class="tab-pane fade in active" id="tech-feature-img-1">
-                                <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/feature-1.png" alt="screenshot" ></a>
-
+                        <div class="videos-content tab-content col-md-8 col-sm-8 col-xs-12 col-md-pull-0 col-sm-pull-0 col-xs-pull-0">
+                            <div role="tabpanel" class="tab-pane fade in active" id="video-1">
+                                <div class="video">
+                                    <iframe class="video-inner" src="https://www.youtube.com/embed/qrgmpxIzBrs" frameborder="0" allowfullscreen></iframe>
+                                </div>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade" id="tech-feature-img-2">
-                                <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/feature-2.png" alt="screenshot" ></a>
+                            <div role="tabpanel" class="tab-pane fade" id="video-2">
+                                <div class="video">
+                                    <iframe class="video-inner" src="https://www.youtube.com/embed/Pd047gmTDBw" frameborder="0" allowfullscreen></iframe>
+                                </div>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade" id="tech-feature-img-3">
-                                <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/feature-3.png" alt="screenshot" ></a>
+                            <div role="tabpanel" class="tab-pane fade" id="video-3">
+                                <div class="video">
+                                    <iframe class="video-inner" src="https://www.youtube.com/embed/oWuobYoLJe0" frameborder="0" allowfullscreen></iframe>
+                                </div>
                             </div>
-                            <div role="tabpanel" class="tab-pane fade" id="tech-feature-img-4">
-                                <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/feature-4.png" alt="screenshot" ></a>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade" id="tech-feature-img-5">
-                                <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/feature-4.png" alt="screenshot" ></a>
-                            </div>
-
-                        </div><!--//techs-content-->
+                        </div><!--//videos-content-->
 
                         <!-- Tab panes -->
-                        <div class="tab-content col-md-3 col-sm-4 col-xs-12 col-lg-pull-10 col-md-pull-9 col-sm-pull-8 col-xs-pull-0">
-                            <div role="tabpanel" class="tab-pane fade in active" id="tech-feature-txt-1">
-                                <p class="explain">
-                                    "Things" talk to each other using MQTT protocol.
-                                    The MQTT broker is actually a CloudMQTT server which handles commands & queries from any member of the network.
-
-                                    <br class="hidden-xs"><br class="hidden-xs">
-                                    <b>Extending your network with more "things" no matter their location was never easier.</b>
-                                </p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade" id="tech-feature-txt-2">
-                                <p class="explain">
-                                    The MQTT broker is "Cloud Hosted" therefore accessible even outside your LAN, to anyone you desire!
-                                    <br class="hidden-xs"><br class="hidden-xs">
-                                    <b>No need to expose ports on your personal router</b> in order to control your AC from a mobile app.
-                                </p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade" id="tech-feature-txt-3">
-                                <p class="explain">
-                                    <b>Required resource's to run a "Thing" are low - aimed to run on most of the Cortex-M MCUs.</b>
-                                    <br class="hidden-xs"><br class="hidden-xs">
-                                    Currently, the things are implemented on TI CC1350 LaunchPad connected to
-                                    TI CC3100 Boosterpack supplying the WiFi Connectivity and requires ~40kB RAM and ~60kB ROM.
-                                </p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade" id="tech-feature-txt-4">
-                                <p class="explain">
-                                    One of the coolest things we can add are voice controllers like Google Home or Amazon Echo.
-                                    Adding them to the network of "Things" <b>will enable voice control</b> over the other things,
-                                    like "Turn on the lights in the kitchen".
-                                    <br class="hidden-xs"><br class="hidden-xs">
-                                    You can even query the temperature in your bedroom and be replied with a metallic voice :)
-                                </p>
-                            </div>
-                            <div role="tabpanel" class="tab-pane fade" id="tech-feature-txt-5">
-                                <p class="explain">
-                                    The code of the embedded nodes & The dialogflow server (hosted by Heroku) can be found
-                                    in our Github repository.
-                                    <br class="hidden-xs"><br class="hidden-xs">
-                                    You can find our project on Github: <b>add link here</b>
-                                </p>
-                            </div>
-
-                        </div><!--//videos-content-->
                     </div><!--//tabbed-area-->
                 </div><!--//container-->
             </div><!--//videos-->
         </div><!--//container-->
     </div><!--//demonstration-section-->
-
-    <div id="contact" class="contact-section">
-        <div class="container text-center">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-content">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.</p>
-                
-            </div>
-            <a class="btn btn-cta btn-primary" href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm">Get in Touch</a>
-            
-        </div><!--//container-->
-    </div><!--//contact-section-->
-    
     <footer class="footer text-center">
         <div class="container">
             <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->

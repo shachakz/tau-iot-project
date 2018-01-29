@@ -26,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="826">
-              <caret line="511" column="133" selection-start-line="511" selection-start-column="133" selection-end-line="511" selection-end-column="133" />
+            <state relative-caret-position="561">
+              <caret line="488" column="110" selection-start-line="488" selection-start-column="110" selection-end-line="488" selection-end-column="110" />
               <folding />
             </state>
           </provider>
@@ -36,8 +36,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="830" column="16" selection-start-line="830" selection-start-column="10" selection-end-line="830" selection-end-column="16" />
+            <state relative-caret-position="740">
+              <caret line="1048" column="0" selection-start-line="1048" selection-start-column="0" selection-end-line="1048" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -239,12 +239,12 @@
       <option name="presentableId" value="Default" />
       <updated>1517076852027</updated>
       <workItem from="1517076853359" duration="20111000" />
-      <workItem from="1517171805793" duration="6152000" />
+      <workItem from="1517171805793" duration="10754000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26263000" />
+    <option name="totallyTimeSpent" value="30865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -322,14 +322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/aria.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="763" column="22" selection-start-line="763" selection-start-column="22" selection-end-line="763" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/images/logo-icon.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -350,14 +342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/plugins/bootstrap/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="4" column="15836" selection-start-line="4" selection-start-column="15836" selection-end-line="4" selection-end-column="15836" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/images/drawsvg.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -367,18 +351,34 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index_orig.html" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/aria.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="1017" column="22" selection-start-line="1017" selection-start-column="22" selection-end-line="1017" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/plugins/bootstrap/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="4" column="15836" selection-start-line="4" selection-start-column="15836" selection-end-line="4" selection-end-column="15836" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="830" column="16" selection-start-line="830" selection-start-column="10" selection-end-line="830" selection-end-column="16" />
+        <state relative-caret-position="740">
+          <caret line="1048" column="0" selection-start-line="1048" selection-start-column="0" selection-end-line="1048" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="826">
-          <caret line="511" column="133" selection-start-line="511" selection-start-column="133" selection-end-line="511" selection-end-column="133" />
+        <state relative-caret-position="561">
+          <caret line="488" column="110" selection-start-line="488" selection-start-column="110" selection-end-line="488" selection-end-column="110" />
           <folding />
         </state>
       </provider>
