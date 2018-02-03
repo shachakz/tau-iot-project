@@ -383,7 +383,25 @@
                 There is room to extend & enhance this flow - supporting multiple consumers query, crafting
                 the sentence of the response in dialogflow instead of the endpoint and more...
                 <br class="hidden-xs"><br class="hidden-xs">
-            </div>
+                <div class="sub-title">A word about Heroku & Dialogflow</div>
+		For this demonstration, we used a Google Home Mini as a control device. Obviously, the google home's platform doesn't
+		normally send mqtt messages our endpoints does.<br class="hidden-xs">
+		In order to add it to our network - we implemented our own "adapter" so google output will behave like yet another device with our
+		designed architecture.<br class="hidden-xs">
+		Technically speaking, we used Dialogflow and Heroku platforms in order to achieve so:<br class="hidden-xs">
+		Dialogflow (<a href="https://dialogflow.com/">link</a>) is a platform to define dialog flows - 
+		creating schemas for conversation with bot, home assistant or whatever you would like.
+		It has built in integrations with many other platforms like Google's home assistant, Alexa's skills, Facebook's chat and more. That's how we "break" the sentence
+		"Turn on the lights in  the living room" to something much more pleasent - a JSON with the sentence structure: <b>PUT A JSON HERE INSIDE CODE SNIPPET</b>
+		will be sent to a pre-defined HTTP web server via POST request. (the JSON will be the content field inside the POST)
+		Excellent - We now had the capability to transform our sentence into a structured JSON while eforicng user to supply 
+		all required fields (command: "turn on", location: "kitchen" & device: "lights").	
+                <br class="hidden-xs"><br class="hidden-xs">
+		All we needed is an adapter to adapt between that received the structured JSON, creates a new MQTT message and publish it to the MQTT Cloud server. <br class="hidden-xs">
+		That's where we used Heroku (<a href="https://www.heroku.com/">link</a>) - 
+		A Cloud Services platform. It's really easy to deploy a web servce using this platform - in this case a RESTful API Gateway.
+		This web service simply receives the "JSON speech", transforms it to a topic based MQTT message and sends it to the Cloud MQTT. Then, it awaits to a response asynchronously and
+		returns it to the HTTP Post session (unless there is a timeous). It is written in JavaScript (NodeJS) and can be found at our GitHub repo.
             <div id="videos" class="videos-sub-section">
                 <div class="container text-center">
                     <div class="tabbed-area row">
